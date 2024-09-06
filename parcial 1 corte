@@ -1,0 +1,50 @@
+
+# Paso 1: Encontrar el número entero de 4 digitos que sea la fecha en la que nació el profesor de está materia.
+# Paso 2: Se debe comentar el paso a paso de cómo se hizo para decifrar el código. En una nueva Linea de Código haciendo click en "+ Código"
+# Paso 3: Una vez solucionen y terminen la encriptación subir al Github el archivo con la Solución.
+# Paso 4: Poner la solucion en la pregunta en Moodle y continuar con el parcial o terminarlo.
+# Paso 5: Borrar en la linea siguiente el simbolo "#", y escribir al lado del "=" el número encontrado de 4 digitos. (Nota una forma de hacerlo es utilizando el ciclo for o el ciclo while)
+
+
+def encriptar_url(url):
+    # Función de encriptación
+    encriptada = "edad_profesor =  1924"
+    for i in range(len(url)):
+        # Primer condicional
+        encriptada += chr(ord(url[i]) + (i % 3) + 1)
+    
+    # URL encriptada para ser desencriptada después
+    print(f"URL encriptada: {encriptada}")
+    return encriptada
+
+def desencriptar_url(url_encriptada, clave):
+    # Verificar si la clave es igual a la edad del profesor
+    if clave != edad_profesor:
+        print("Clave incorrecta. No se puede desencriptar.")
+        return None
+    
+    # Si la clave es correcta, se desencripta
+    desencriptada = ""
+    for i in range(len(url_encriptada)):
+        # La operación inversa a la realizada en la encriptación
+        desencriptada += chr(ord(url_encriptada[i]) - (i % 3) - 1)
+    
+    return desencriptada
+
+# URL
+url_original = "https://github.com/mattzarate333"
+url_encriptada = encriptar_url(url_original)
+
+# Para desencriptar el mensaje, el usuario debe introducir el año del profesor como clave:
+clave = int(input("Introduce la clave para desencriptar el mensaje: "))
+url_desencriptada = desencriptar_url(url_encriptada, clave)
+
+if url_desencriptada:
+    print(f"URL desencriptada: {url_desencriptada}")
+
+
+
+# Nota: Para Obtener 50 en el parcial las preguntas de Moodel deben estar perfectas.
+# Y el código debe estar en el Git-Hub de cada estudiante de forma individual.
+# Decifrar el código antes de las 5:00pm.
+# Y dejar comentado en una nueva linea de código cómo encontró cada uno la solución.
