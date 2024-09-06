@@ -48,3 +48,5 @@ if url_desencriptada:
 # Y el código debe estar en el Git-Hub de cada estudiante de forma individual.
 # Decifrar el código antes de las 5:00pm.
 # Y dejar comentado en una nueva linea de código cómo encontró cada uno la solución.
+
+# la primera parte la descubri suguiendo las instrucciones en el texto y poniendolo dentro de la funcion que tenia dos comillas y poniendole una fecha al azar luego trate desifrar por medio de la tabla ascill el link incriptado.
